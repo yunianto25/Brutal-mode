@@ -37,8 +37,6 @@ body {
   min-height: 100vh;
   padding-bottom: 60px;
 }
-
-/* HEADER */
 .hdr {
   background: var(--bg2);
   border-bottom: 1px solid var(--border);
@@ -75,13 +73,12 @@ body {
 }
 .sess-dot.on { background: var(--green); box-shadow: 0 0 6px var(--green); }
 .sess-dot.lo { background: var(--gold); }
-
-/* STATUS BAR */
 .statusbar {
   background: var(--bg3);
   border-bottom: 1px solid var(--border);
   padding: 8px 18px;
   display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 4px;
 }
 .binance-status {
   display: flex; align-items: center; gap: 6px;
@@ -95,11 +92,13 @@ body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px; font-weight: 600; color: var(--text);
 }
-
-/* SECTION WRAPPER */
+.data-note {
+  width: 100%;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px; color: var(--text3); letter-spacing: 0.5px;
+  margin-top: 2px;
+}
 .wrap { padding: 14px 16px 0; }
-
-/* MODE TOGGLE */
 .mode-toggle {
   display: flex; gap: 4px;
   background: var(--bg2);
@@ -120,8 +119,6 @@ body {
   border: 1px solid var(--gold-lo);
   box-shadow: 0 0 14px var(--gold-glow);
 }
-
-/* CARD */
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -143,8 +140,6 @@ body {
   font-size: 9px; color: var(--text3);
 }
 .card-bd { padding: 14px 15px; }
-
-/* MANUAL INPUT */
 .manual-row {
   display: flex; gap: 8px; align-items: center;
   margin-bottom: 10px;
@@ -170,7 +165,6 @@ body {
 .num-input:focus { border-color: var(--gold); box-shadow: 0 0 0 2px var(--gold-glow); }
 .num-input.err { border-color: var(--red) !important; }
 .num-input::placeholder { color: var(--text3); font-size: 13px; }
-
 .go-btn {
   background: var(--gold);
   border: none; border-radius: 8px;
@@ -181,8 +175,6 @@ body {
   transition: all 0.15s; white-space: nowrap;
 }
 .go-btn:active { transform: scale(0.95); background: var(--gold-hi); }
-
-/* OFFSET ROW */
 .offset-row {
   display: flex; gap: 8px; align-items: center;
 }
@@ -207,8 +199,6 @@ body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 9px; color: var(--text3);
 }
-
-/* HINT */
 .hint {
   font-family: 'JetBrains Mono', monospace;
   font-size: 9px; color: var(--text2); margin-top: 8px;
@@ -216,8 +206,6 @@ body {
 .hint.ok { color: var(--green); }
 .hint.err { color: var(--red); }
 .hint.warn { color: var(--gold); }
-
-/* ATR CHIPS */
 .atr-chips {
   display: grid; grid-template-columns: 1fr 1fr 1fr;
   gap: 8px;
@@ -236,8 +224,6 @@ body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 14px; font-weight: 700; color: var(--gold-hi);
 }
-
-/* MTF BIAS */
 .mtf-grid {
   display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;
 }
@@ -256,8 +242,6 @@ body {
 .mtf-sig.bull { background: var(--green-dim); color: var(--green); border-color: var(--green-bd); }
 .mtf-sig.bear { background: var(--red-dim); color: var(--red); border-color: var(--red-bd); }
 .mtf-sig.neu  { background: var(--bg3); color: var(--text2); border-color: var(--border); }
-
-/* SIGNAL MAIN */
 .sig-main {
   display: flex; align-items: flex-start;
   justify-content: space-between; margin-bottom: 16px;
@@ -269,7 +253,6 @@ body {
 .sig-text.buy { color: var(--green); text-shadow: 0 0 40px rgba(62,207,130,0.35); }
 .sig-text.sell { color: var(--red); text-shadow: 0 0 40px rgba(232,85,85,0.35); }
 .sig-text.wait { color: var(--text2); }
-
 .conf-box { text-align: right; }
 .conf-lbl {
   font-family: 'JetBrains Mono', monospace;
@@ -286,8 +269,6 @@ body {
   height: 100%; background: var(--gold); border-radius: 2px;
   transition: width 0.7s cubic-bezier(.4,0,.2,1);
 }
-
-/* LEVELS TABLE */
 .lvl-table { display: flex; flex-direction: column; gap: 1px; margin-bottom: 10px; }
 .lvl-row {
   display: flex; justify-content: space-between; align-items: center;
@@ -315,8 +296,6 @@ body {
 .lvl-pts {
   font-size: 9px; color: var(--text2); margin-left: 4px;
 }
-
-/* RR ROW */
 .rr-row {
   display: flex; justify-content: space-between; align-items: center;
   padding: 10px 12px; margin-bottom: 14px;
@@ -331,8 +310,6 @@ body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 16px; font-weight: 700; color: var(--gold-hi);
 }
-
-/* FACTORS */
 .factor-divider {
   font-family: 'JetBrains Mono', monospace;
   font-size: 9px; letter-spacing: 2px; color: var(--text3);
@@ -352,8 +329,6 @@ body {
 .f-val.bear { color: var(--red); }
 .f-val.warn { color: var(--gold); }
 .f-val.neu  { color: var(--text2); }
-
-/* SCALP GRID */
 .scalp-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
   margin-top: 10px;
@@ -378,8 +353,6 @@ body {
   font-size: 9px; color: var(--text2); line-height: 1.7;
 }
 .scalp-info span { color: var(--white); }
-
-/* PLACEHOLDER */
 .ph {
   text-align: center; padding: 30px 20px;
   color: var(--text3);
@@ -389,16 +362,12 @@ body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px; line-height: 2; color: var(--text3);
 }
-
-/* STALE */
 .stale {
   display: none; margin-top: 8px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 9px; color: var(--gold);
 }
 .stale.show { display: block; }
-
-/* SCROLLBAR */
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
@@ -406,7 +375,6 @@ body {
 </head>
 <body>
 
-<!-- HEADER -->
 <div class="hdr">
   <div class="hdr-l">
     <div class="eyebrow">FERY AI · MANUAL INPUT v2</div>
@@ -421,7 +389,6 @@ body {
   </div>
 </div>
 
-<!-- STATUS BAR -->
 <div class="statusbar">
   <div class="binance-status">
     <div class="bin-dot" id="binDot"></div>
@@ -430,15 +397,14 @@ body {
   <div class="bin-price">
     Binance: <span id="binPrice">--</span>
   </div>
+  <div class="data-note">⚠ Sumber: PAXG/USDT (token, bukan spot XAU) — ATR/volatilitas bisa beda dari chart broker lo, cross-check manual sesekali</div>
 </div>
 
-<!-- MODE TOGGLE -->
 <div class="mode-toggle">
   <button class="mbtn on" id="btnC" onclick="setMode('c')">⚡ CONFLUENCE</button>
   <button class="mbtn"    id="btnS" onclick="setMode('s')">🔫 SCALPING</button>
 </div>
 
-<!-- MANUAL ENTRY INPUT -->
 <div class="wrap">
   <div class="card">
     <div class="card-hd">
@@ -464,7 +430,6 @@ body {
   </div>
 </div>
 
-<!-- ATR CHIPS -->
 <div class="wrap" id="atrWrap" style="display:none">
   <div class="atr-chips">
     <div class="atr-chip">
@@ -482,7 +447,6 @@ body {
   </div>
 </div>
 
-<!-- MTF BIAS -->
 <div class="wrap" id="mtfWrap" style="display:none">
   <div class="card">
     <div class="card-hd">
@@ -507,7 +471,6 @@ body {
   </div>
 </div>
 
-<!-- CONFLUENCE CONTENT -->
 <div id="cContent">
   <div class="wrap">
     <div class="card" id="sigCard">
@@ -516,12 +479,10 @@ body {
         <div class="card-sub" id="sigTime">--:--:--</div>
       </div>
       <div class="card-bd">
-        <!-- PLACEHOLDER -->
         <div class="ph" id="cPh">
           <div class="ph-ico">📊</div>
           <div class="ph-txt">Masukkan harga entry dari TV<br/>Signal dihitung dari data Binance real<br/>Entry/SL/TP pakai harga broker lo</div>
         </div>
-        <!-- CONTENT -->
         <div id="cResult" style="display:none">
           <div class="sig-main">
             <div class="sig-text" id="sigTxt">--</div>
@@ -564,7 +525,7 @@ body {
             <div class="f-row"><div class="f-name">M15 Momentum</div><div class="f-val" id="fM15">--</div></div>
             <div class="f-row"><div class="f-name">M5 Entry</div><div class="f-val" id="fM5">--</div></div>
             <div class="f-row"><div class="f-name">EMA Stack</div><div class="f-val" id="fEMA">--</div></div>
-            <div class="f-row"><div class="f-name">RSI M5</div><div class="f-val" id="fRSI">--</div></div>
+            <div class="f-row"><div class="f-name">RSI M5 (Wilder)</div><div class="f-val" id="fRSI">--</div></div>
             <div class="f-row"><div class="f-name">Session</div><div class="f-val" id="fSess">--</div></div>
           </div>
         </div>
@@ -573,7 +534,6 @@ body {
   </div>
 </div>
 
-<!-- SCALPING CONTENT -->
 <div id="sContent" style="display:none">
   <div class="wrap">
     <div class="ph" id="sPh">
@@ -614,8 +574,8 @@ let lastCalc = null;
 let staleTimer = null;
 let binancePrice = null;
 
-// Bybit candle data (real)
-let candles = { m5: [], m15: [], h1: [] };
+// candle data (real) — m1 ditambah, dipakai khusus utk scalping M1
+let candles = { m1: [], m5: [], m15: [], h1: [] };
 let indicators = null;
 
 // ============================================================
@@ -677,7 +637,8 @@ async function fetchPrice() {
 
 async function loadBinanceData() {
   try {
-    [candles.m5, candles.m15, candles.h1, binancePrice] = await Promise.all([
+    [candles.m1, candles.m5, candles.m15, candles.h1, binancePrice] = await Promise.all([
+      fetchCandles('1m', 100),
       fetchCandles('5m', 100),
       fetchCandles('15m', 100),
       fetchCandles('1h', 100),
@@ -708,14 +669,29 @@ function ema(closes, period) {
   return e;
 }
 
+// Wilder-smoothed RSI (matches TradingView's default RSI calc)
 function rsi(closes, period = 14) {
   if (closes.length < period + 1) return 50;
+
   let gains = 0, losses = 0;
-  for (let i = closes.length - period; i < closes.length; i++) {
-    const diff = closes[i] - closes[i-1];
+  for (let i = 1; i <= period; i++) {
+    const diff = closes[i] - closes[i - 1];
     if (diff > 0) gains += diff; else losses -= diff;
   }
-  const rs = gains / (losses || 0.001);
+  let avgGain = gains / period;
+  let avgLoss = losses / period;
+
+  // Wilder smoothing for the rest of the series
+  for (let i = period + 1; i < closes.length; i++) {
+    const diff = closes[i] - closes[i - 1];
+    const gain = diff > 0 ? diff : 0;
+    const loss = diff < 0 ? -diff : 0;
+    avgGain = (avgGain * (period - 1) + gain) / period;
+    avgLoss = (avgLoss * (period - 1) + loss) / period;
+  }
+
+  if (avgLoss === 0) return 100;
+  const rs = avgGain / avgLoss;
   return 100 - 100 / (1 + rs);
 }
 
@@ -743,6 +719,7 @@ function trend(closes, fast = 8, mid = 21, slow = 55) {
 }
 
 function computeIndicators() {
+  const closesM1  = candles.m1.map(c => c.c);
   const closesM5  = candles.m5.map(c => c.c);
   const closesM15 = candles.m15.map(c => c.c);
   const closesH1  = candles.h1.map(c => c.c);
@@ -750,6 +727,8 @@ function computeIndicators() {
   const tH1  = trend(closesH1);
   const tM15 = trend(closesM15);
   const tM5  = trend(closesM5);
+  // M1 pakai EMA periode lebih cepat (5/13/34) karena timeframe-nya jauh lebih pendek
+  const tM1  = trend(closesM1, 5, 13, 34);
 
   const rsiM5  = rsi(closesM5);
 
@@ -757,16 +736,13 @@ function computeIndicators() {
   const atrM15 = atr(candles.m15);
   const atrH1  = atr(candles.h1);
 
-  // EMA stack aligned?
   const emaAligned = (tH1 === tM15 && tM15 === tM5 && tH1 !== 'NEUTRAL');
 
-  // Confluence count
   let bull = 0, bear = 0;
   [tH1, tM15, tM5].forEach(t => { if (t === 'BULL') bull++; else if (t === 'BEAR') bear++; });
 
   const direction = bull > bear ? 'BUY' : bear > bull ? 'SELL' : 'WAIT';
 
-  // Session
   const h = wibNow().getHours();
   const activeSess = (h >= 14 && h < 22) || (h >= 20 || h < 4);
   let sessLabel = 'OFF SESSION';
@@ -774,20 +750,18 @@ function computeIndicators() {
   else if (h >= 20 || h < 4) sessLabel = 'NEW YORK ✓';
   else if (h >= 2 && h < 10) sessLabel = 'TOKYO';
 
-  // RSI extreme warning
   const rsiExtreme = rsiM5 > 75 || rsiM5 < 25;
 
   // ============================================================
   // TIERING SYSTEM
   // Tier A: full confluence (3/3 timeframe align) — high conf, jarang
-  // Tier B: partial confluence (2/3 align) + momentum ok — sering, size kecil
+  // Tier B: partial confluence (2/3 align) + momentum tegas — size kecil
   // WAIT: nggak ada confluence sama sekali
   // ============================================================
   let tier = null;
   let conf = 30;
 
   if (emaAligned) {
-    // TIER A — full alignment
     tier = 'A';
     conf = 70;
     if (rsiM5 > 50 && direction === 'BUY')  conf += 10;
@@ -795,8 +769,9 @@ function computeIndicators() {
     if (rsiExtreme) conf -= 10;
     if (activeSess) conf += 10;
   } else if ((bull === 2 || bear === 2) && direction !== 'WAIT') {
-    // TIER B — 2 dari 3 timeframe align + momentum check
-    const momentumOk = (direction === 'BUY' && rsiM5 > 45) || (direction === 'SELL' && rsiM5 < 55);
+    // Momentum filter dipertajam: ada deadzone 48-52 di sekitar RSI netral
+    // biar gak asal lolos kayak sebelumnya (45-55 nyaris selalu true)
+    const momentumOk = (direction === 'BUY' && rsiM5 > 52) || (direction === 'SELL' && rsiM5 < 48);
     if (momentumOk) {
       tier = 'B';
       conf = 45;
@@ -809,23 +784,15 @@ function computeIndicators() {
 
   conf = Math.max(20, Math.min(conf, 95));
 
-  // ============================================================
-  // ENTRY RANGE ZONE
-  // Range dihitung dari ATR M5 kecil (0.3-0.5x) di sekitar harga
-  // Tier A → range lebih ketat (0.3x ATR M5)
-  // Tier B → range lebih lebar (0.5x ATR M5), karena sinyal lebih awal
-  // ============================================================
   let rangeMultiplier = 0;
   if (tier === 'A') rangeMultiplier = 0.3;
   else if (tier === 'B') rangeMultiplier = 0.5;
 
   const rangeWidth = atrM5 * rangeMultiplier;
-
-  // Tier B size factor — 0.3x dari Tier A
   const sizeFactor = tier === 'A' ? 1.0 : tier === 'B' ? 0.3 : 0;
 
   return {
-    tH1, tM15, tM5,
+    tH1, tM15, tM5, tM1,
     rsiM5: rsiM5.toFixed(1),
     rsiExtreme,
     atrM5: atrM5.toFixed(2),
@@ -889,13 +856,11 @@ function runCalc() {
   document.getElementById('entryTimestamp').textContent = ts;
   setHint(`✓ Entry broker: ${brokerPrice.toFixed(2)} (offset ${offset >= 0 ? '+' : ''}${offset})`, 'ok');
 
-  // Show ATR
   document.getElementById('atrWrap').style.display = 'block';
   document.getElementById('aM5').textContent  = indicators.atrM5;
   document.getElementById('aM15').textContent = indicators.atrM15;
   document.getElementById('aH1').textContent  = indicators.atrH1;
 
-  // Show MTF
   document.getElementById('mtfWrap').style.display = 'block';
   setMTF('mH1',  indicators.tH1);
   setMTF('mM15', indicators.tM15);
@@ -936,7 +901,6 @@ function renderConfluence(price, ts) {
   document.getElementById('confNum').textContent = ind.conf + '%';
   document.getElementById('confBar').style.width = ind.conf + '%';
 
-  // Tier badge
   let tierBadge = document.getElementById('tierBadge');
   if (!tierBadge) {
     tierBadge = document.createElement('div');
@@ -970,12 +934,10 @@ function renderConfluence(price, ts) {
     document.getElementById('lTP2pts').textContent = '';
     document.getElementById('rrV').textContent = '1 : --';
   } else {
-    // Entry RANGE ZONE
     const half = ind.rangeWidth / 2;
     const rangeLo = price - half;
     const rangeHi = price + half;
 
-    // Levels from broker price (midpoint of range)
     let sl, tp1, tp2;
     if (dir === 'BUY') {
       sl  = price - atr;
@@ -994,10 +956,14 @@ function renderConfluence(price, ts) {
     document.getElementById('lSLpts').textContent  = ` (${atr.toFixed(2)} pts)`;
     document.getElementById('lTP1pts').textContent = ` (${(atr * 1.5).toFixed(2)} pts)`;
     document.getElementById('lTP2pts').textContent = ` (${(atr * 3).toFixed(2)} pts)`;
-    document.getElementById('rrV').textContent = '1 : 1.50';
+
+    // RR ratio DIHITUNG BENERAN dari jarak SL vs TP1 (bukan hardcode lagi)
+    const slDist  = Math.abs(price - sl);
+    const tp1Dist = Math.abs(tp1 - price);
+    const rr = slDist > 0 ? (tp1Dist / slDist) : 0;
+    document.getElementById('rrV').textContent = `1 : ${rr.toFixed(2)}`;
   }
 
-  // Factors
   setF('fH1',  ind.tH1  === 'BULL' ? '↑ BULL' : ind.tH1  === 'BEAR' ? '↓ BEAR' : '— NEUTRAL',
                ind.tH1  === 'BULL' ? 'bull' : ind.tH1  === 'BEAR' ? 'bear' : 'neu');
   setF('fM15', ind.tM15 === 'BULL' ? '↑ BULL' : ind.tM15 === 'BEAR' ? '↓ BEAR' : '— NEUTRAL',
@@ -1028,14 +994,13 @@ function renderScalping(price) {
   const atrM5  = parseFloat(ind.atrM5);
   const atrM15 = parseFloat(ind.atrM15);
 
-  // Tier-based range width (tighter for M1, wider for higher TF)
   const rangeM1  = atrM5 * 0.2;
   const rangeM5  = atrM5 * 0.3;
   const rangeM15 = atrM15 * 0.25;
 
-  // M1 → pakai M5 trend sebagai proxy
-  const m1dir = ind.tM5;
-  const m5dir = ind.tM5;
+  // M1 sekarang pakai trend candle M1 ASLI (tM1), bukan proxy M5 lagi
+  const m1dir  = ind.tM1;
+  const m5dir  = ind.tM5;
   const m15dir = ind.tM15;
   const h1dir  = ind.tH1;
 
@@ -1043,13 +1008,11 @@ function renderScalping(price) {
   setScalp('sM5',  m5dir,  (atrM5 * 1.0).toFixed(1),  (atrM5 * 0.7).toFixed(1), price, rangeM5);
   setScalp('sM15', m15dir, (atrM15 * 0.8).toFixed(1), (atrM15 * 0.5).toFixed(1), price, rangeM15);
 
-  // H1 — just bias
   const h1el = document.getElementById('sH1');
   h1el.textContent = h1dir;
   h1el.className = 'scalp-sig ' + (h1dir === 'BULL' ? 'buy' : h1dir === 'BEAR' ? 'sell' : 'wait');
   document.getElementById('sH1bias').textContent = h1dir;
 
-  // Fix SL values
   document.getElementById('sM1sl').textContent  = (atrM5 * 0.3).toFixed(1);
   document.getElementById('sM5sl').textContent  = (atrM5 * 0.7).toFixed(1);
   document.getElementById('sM15sl').textContent = (atrM15 * 0.5).toFixed(1);
@@ -1062,7 +1025,6 @@ function setScalp(sigId, dir, tp, sl, price, rangeWidth) {
   document.getElementById(sigId + 'tp').textContent = tp;
   document.getElementById(sigId + 'sl').textContent = sl;
 
-  // Entry range zone — only if direction is not WAIT
   let rangeEl = document.getElementById(sigId + 'range');
   if (!rangeEl) {
     rangeEl = document.createElement('div');
@@ -1097,7 +1059,6 @@ function startStale() {
   }, 30000);
 }
 
-// Enter key
 document.getElementById('entryInput').addEventListener('keydown', e => {
   if (e.key === 'Enter') runCalc();
 });
